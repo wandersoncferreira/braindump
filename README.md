@@ -84,7 +84,7 @@ links to other files. Let's change those as well:
   (save-excursion
     (goto-char (point-min))
     (while (re-search-forward "\\(file:\\).+\.org" nil t)
-      (replace-match "braindump:"))))
+      (replace-match "braindump:" nil nil nil 1))))
 
 (add-hook 'org-export-before-processing-hook 'bk/replace-file-handle)
 ```
