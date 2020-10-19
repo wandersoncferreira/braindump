@@ -6,15 +6,13 @@ type = "index"
 draft = false
 +++
 
-## Hi! {#hi}
+## Hello Human {#hi}
 
 I'm [Wand](https://github.com/wandersoncferreira), and you've chanced
-upon my braindump.  This website contains my working notes accumulated
-over some years. They're in a really messy transition state: most of
-them are literature notes, and there are close to no conceptual notes,
-which I intend to start taking soon.
+upon my zettelkasten.  This website contains my working notes
+accumulated over some years.
 
-I also haven't made good entry-points to my brain yet, but you can start hopping
-around by going to the [full index](/posts/).
+I also haven't made good entry-points to my brain yet, but you can
+start hopping around by going to the [full index](/posts/).
 
 Have fun!

@@ -1,6 +1,6 @@
-baseURL = "https://braindump.jethro.dev/"
+baseURL = "https://bartuka.com"
 languageCode = "en-us"
-title = "Wand's Braindump"
+title = "Wand's Zettelkasten"
 theme = "cortex"
 refLinksErrorLevel = "WARNING"
 
