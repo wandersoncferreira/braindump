@@ -52,7 +52,7 @@ and find all their backlinks.
   (if (org-roam--org-roam-file-p file)
       (--reduce-from
        (concat acc
-               (let ((fld (car (split-string (file-relative-name (car it) org-roam-directory) ".orgr"))))
+               (let ((fld (car (split-string (file-relative-name (car it) org-roam-directory) ".org"))))
                  (format "- [[braindump:%s][%s]]\n"
                          fld
                          (org-roam--get-title-or-slug (car it)))))
