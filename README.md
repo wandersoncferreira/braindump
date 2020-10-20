@@ -106,6 +106,32 @@ There is also a way to automatically export as you save your notes
 using `org-hugo-auto-export-mode`.
 
 
+If you want to add the `hugo_base_dir` attribute to all files, you can
+do something like this:
+
+```emacs-lisp
+(defvar bk/braindump-org-roam-dir "~/all/zettelkasten")
+(defvar bk/braindump-org-ext ".orgr")
+(defvar bk/braindump-base-dir "~/open-source/braindump")
+
+(defun bk/process-file (f)
+  (save-excursion
+    (find-file f)
+    (goto-char (point-min))
+    (when (not (re-search-forward "HUGO_BASE_DIR:" nil t))
+      (forward-line)
+      (insert (format "#+HUGO_BASE_DIR: %s\n" bk/braindump-base-dir)))
+    (save-buffer)
+    (kill-buffer (current-buffer))))
+
+(defun bk/add-hugo-base-dir ()
+  "Parse all files for personal blog."
+  (interactive)
+  (mapc 'bk/process-file
+        (directory-files bk/braindump-org-roam-dir t
+                         (format "%s$" bk/braindump-org-ext))))
+```
+
 ### Customizations
 
 Change the file `content/_index.md` to your liking.
