@@ -2,3 +2,5 @@ public/
 resources/
 content/posts/
 -content/posts/.empty
+static/
+-static/.empty
